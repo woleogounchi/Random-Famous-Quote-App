@@ -63,14 +63,14 @@ function printQuote() {
     // We create a variable called `randQuoteKeys` containing a 
     // list of the keys for any randQuote.
     var randQuoteKeys = Object.keys(randQuote);
-    // We cjeck if `citation` and `year` are in the list of keys 
-    // and if so we add their values to the HTML string.
-    if (randQuoteKeys.indexOf('citation') >= 0) {
+    // If `citation` and `year` are in the list of keys 
+    // we add their values to the HTML string.
+    if (randQuoteKeys.citation) {
         stringVar += '<span class="citation">';
         stringVar += randQuote['citation'];
         stringVar += '</span>';
     }
-    if (randQuoteKeys.indexOf('year') >= 0) {
+    if (randQuoteKeys.year) {
         stringVar += '<span class="year">';
         stringVar += randQuote['year'];
         stringVar += '</span>';
